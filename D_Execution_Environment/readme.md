@@ -1,7 +1,9 @@
 ## Install the D language execution environment.
 
 ```conda create -n d_env python=3.8```
+
 ```conda activate d_env```
+
 ```curl -fsS https://dlang.org/install.sh | bash -s dmd```
 
 
