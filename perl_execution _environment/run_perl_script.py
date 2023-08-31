@@ -27,10 +27,13 @@ def save_codes_from_txt(txt_filepath: str, output_folder: str):
 def execute_perl_script(script_path):
     """Executes a given Perl script and returns its output."""
     try:
-        result = subprocess.check_output(['perl', script_path], stderr=subprocess.STDOUT, text=True)
+        result = subprocess.check_output(['perl', script_path], stderr=subprocess.STDOUT, text=True, timeout=180)
+    except subprocess.TimeoutExpired:
+        return "Script execution timed out after 3 minutes."
     except subprocess.CalledProcessError as e:
         result = e.output
     return result.replace('\n', ' ').strip()
+
 
 def execute_all_perl_scripts_in_folder(folder_path, output_txt_path):
     """Executes all Perl scripts in a given folder and saves the outputs to a text file."""
