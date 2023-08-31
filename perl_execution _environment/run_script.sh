@@ -1,11 +1,18 @@
 #!/bin/bash
 
-conda create -n myperl python=3.8 -y
-source $(conda info --base)/etc/profile.d/conda.sh
-conda activate myperl
-conda install -c conda-forge perl -y
+#*******************Use them only the first time.************************
 
-# Print the perl version information and check if the installation is successful.
-perl -v
+CONDA_BASE=$(conda info --base)
 
-python run_perl_script.py --input_txt /path/to/source_code.txt --output_folder /path/to/output/folder --output_txt /path/to/output_results.txt
+conda create -n perl_envss python=3.8 -y
+
+. $CONDA_BASE/etc/profile.d/conda.sh && conda activate perl_envss && conda install -c conda-forge perl -y
+
+$CONDA_BASE/envs/perl_envss/bin/perl -v   # Print the perl version information and check if the installation is successful.
+
+#*******************Use them only the first time.************************
+
+
+$CONDA_BASE/envs/perl_envss/bin/python run_perl_scripts.py --input_txt /root/autodl-tmp/perl.txt --output_folder /root/autodl-tmp/perl --output_txt /root/autodl-tmp/output_results.txt
+
+
