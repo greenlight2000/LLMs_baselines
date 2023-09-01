@@ -1,0 +1,4 @@
+#!/usr/bin/perl\nuse strict;\nuse warnings;\n\nprint "Hello, World!";
+#!/usr/bin/perl\nuse strict;\nuse warnings;\n\nprint "Hello, hello";
+#!/usr/bin/perl\nuse strict;\nuse warnings;\n\nfor (my $i = 1; $i <= 10; $i++) {\n    print "$i\\n";\n}
+#!/usr/bin/perl\nuse strict;\nuse warnings;\n\nmy @colors = ('red', 'green', 'blue');\nforeach my $color (@colors) {\n    print "$color\\n";\n}
