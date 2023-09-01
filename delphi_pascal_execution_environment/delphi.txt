@@ -1,0 +1,3 @@
+program HelloWorld;\n\nbegin\n  WriteLn('Hello, World!');\n  ReadLn;\nend.
+program GreetDelphi;\n\nbegin\n  WriteLn('hello, Delphi!');\n  ReadLn;\nend.
+program AddTwoNumbers; var num1, num2, sum: Integer; begin num1 := 5; num2 := 7; sum := num1 + num2; WriteLn('5 + 7 = ', sum); ReadLn; end.
