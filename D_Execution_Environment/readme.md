@@ -10,7 +10,7 @@
 ## Activate the D language execution environment.
 ```source ~/dlang/dmd-2.105.0/activate```  # Please follow the prompts returned after the previous step to check if the version number is updated.
 
-```run_perl_scripts.py --input_txt /root/autodl-tmp/perl.txt --output_folder /root/autodl-tmp/perl --output_txt /root/autodl-tmp/output_results.txt```
+```run_d_scripts.py --input_txt /root/autodl-tmp/d.txt --output_folder /root/autodl-tmp/d --output_txt /root/autodl-tmp/output_results.txt```
 
 ```deactivate```
 
