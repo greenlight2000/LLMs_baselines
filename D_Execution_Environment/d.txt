@@ -1,0 +1,5 @@
+import std.stdio;\n\nvoid main() {\n    writeln(\"Hello, World!\");\n}
+import std.stdio;\n\nvoid main() {\n    foreach(i; 1..6) {\n        writeln(i);\n    }\n}
+import std.stdio;\n\nvoid main() {\n    int a = 5, b = 7;\n    writeln(\"The sum of \", a, \" and \", b, \" is: \", a + b);\n}
+import std.stdio;\n\nvoid main() {\n    int[] arr = [1, 2, 3, 4, 5];\n    foreach(elem; arr) {\n        writeln(elem);\n    }\n}
+import std.stdio;\n\nbool isEven(int num) {\n    return num % 2 == 0;\n}\n\nvoid main() {\n    int number = 8;\n    if(isEven(number)) {\n        writeln(number, \" is an even number.\");\n    } else {\n        writeln(number, \" is an odd number.\");\n    }\n}
