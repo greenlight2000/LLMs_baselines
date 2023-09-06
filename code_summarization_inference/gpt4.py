@@ -8,7 +8,7 @@ import logging
 
 openai.api_key = input("Enter your OpenAI API key: ")
 # MAX_TOKENS = 8000
-TEMPORATURE = 0.3
+TEMPORATURE = 0
 MODEL = "gpt-4"
 prompt_template = "Please generate a short summarization for the following codes:\n<code>"
 
