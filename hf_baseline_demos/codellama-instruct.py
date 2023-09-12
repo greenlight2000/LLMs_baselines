@@ -8,13 +8,13 @@ model = AutoModelForCausalLM.from_pretrained(checkpoint,
                                              torch_dtype=torch.float16,
                                              low_cpu_mem_usage=True,
                                              trust_remote_code=True).to(device)
-user_prompt = 'Please generate a short summarization for the following codes:\n<code>'
+user_prompt_template = 'Please generate a short summarization for the following codes:\n<code>'
 
 code = """
 def print_hello_world():
     print('hello world')
 """
-user_prompt = user_prompt.replace('<code>', code)
+user_prompt = user_prompt_template.replace('<code>', code)
 prompt = f"<s>[INST] {user_prompt.strip()} [/INST]"
 inputs = tokenizer(prompt, return_tensors="pt", add_special_tokens=False).to(device)
 output = model.generate(
